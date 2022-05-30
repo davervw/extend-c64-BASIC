@@ -1,6 +1,8 @@
 ; reverse.asm
 ; Copyright (c) 2022 by David R. Van Wagner
 ; davevw.com
+;
+; MIT LICENSE
 ; 
 ; Extending C64 BASIC Part One - Parse String
 ; https://techwithdave.davevw.com/2022/05/extending-c64-basic-part-one-parse.html
