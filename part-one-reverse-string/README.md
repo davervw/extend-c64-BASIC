@@ -10,6 +10,8 @@ Mount reverse_string.d64 disk
     NEW
     SYS 49152,"REVERSE ME"
 
+![Part one example C64 screen](https://github.com/davervw/extend-c64-BASIC/raw/master/part-one-reverse-string/reverse.png)
+
 Source code is 6502 assembler targeting Commodore 64
 
 Requires bin/win/[acme.exe](https://sourceforge.net/projects/acme-crossass/) and bin/win/c1541.exe from [Vice](http://vice-emu.sourceforge.net/index.html#download)
