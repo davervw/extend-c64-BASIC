@@ -1,7 +1,7 @@
 # extend-c64-BASIC
 Examples of how to extend Commodore 64 BASIC interpreter
 
-The intent is to have more than one example.  Stay tuned.
+Stay tuned for more examples.
 
 1. Browse into folders for each example. 
 2. Optionally open individual folder with Visual Code to edit, build, and run.
