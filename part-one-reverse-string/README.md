@@ -8,7 +8,7 @@ Mount reverse_string.d64 disk
 
     LOAD"REVERSE",8,1
     NEW
-    SYS 49152,"REVERSE ME"
+    SYS 49152,"REVERSE STRING"
 
 ![Part one example C64 screen](https://github.com/davervw/extend-c64-BASIC/raw/master/part-one-reverse-string/reverse.png)
 
