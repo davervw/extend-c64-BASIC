@@ -5,7 +5,8 @@
 ; MIT LICENSE
 ; 
 ; Extending C64 BASIC Part Two - Parse String
-; 
+; https://techwithdave.davevw.com/2022/07/extending-c64-basic-part-two-parse-16.html
+; https://github.com/davervw/extend-c64-BASIC/tree/master/part-two-delay-jiffies
 ;
 ; uses ACME Cross Compiler https://sourceforge.net/projects/acme-crossass/
 
@@ -14,29 +15,31 @@ start=$C028 ; machine language org
 chkcom=$aefd ; checks for $2c (comma)
 frmnum=$ad8a ; evaluate expression, check data type
 makadr=$b7f7 ; convert fp to 2 byte integer
-alarm=$57 ; storage in zero page space
+alarm=$57    ; storage in zero page space
 
 * = start
-    jsr chkcom
-    jsr frmnum
-    jsr makadr	; convert to integer
+    jsr chkcom  ; require comma after SYS address
+    jsr frmnum  ; evaluate expression and make sure is a number
+    jsr makadr  ; convert to 16-bit unsigned integer in .Y(lo)/.A(hi)
 
     ; set alarm with interrupts on during critical part, avoiding rollover
-+   clc
+    ; jiffy clock ($A2,A1,A0) added with (0,.A,.Y) accounting for carry bits
++   clc ; prepare for addition
     pha ; save bits 8..15
     tya ; transfer bits 0..7
-    sei
+    sei ; disable interrupts
     adc $A2
     sta alarm+2
     pla ; restore bits 8..15
     adc $A1
     sta alarm+1
     lda $A0
-    cli
+    cli ; re-enable interrupts
     adc #0
     sta alarm
  
-    ; check for alarm, busy wait, highest byte down, assume interrupts off is fine, will wait for any rollover
+    ; busy wait !!!
+    ; check for alarm, highest byte down, assume interrupts off is fine, will wait for any rollover
     lda alarm
 -   cmp $A0
     bne -
@@ -46,4 +49,7 @@ alarm=$57 ; storage in zero page space
     lda alarm+2
 -   cmp $A2
     bne -
+
+    ; done waiting for delay
     rts
+ 
