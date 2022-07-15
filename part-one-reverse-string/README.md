@@ -10,7 +10,7 @@ Mount reverse_string.d64 disk
     NEW
     SYS 49152,"REVERSE STRING"
 
-![Part one example C64 screen](https://github.com/davervw/extend-c64-BASIC/raw/master/part-one-reverse-string/reverse.png)
+![Part one example C64 screen](https://github.com/davervw/extend-c64-BASIC/raw/master/part-one-reverse-string/media/reverse.png)
 
 Source code is 6502 assembler targeting Commodore 64
 

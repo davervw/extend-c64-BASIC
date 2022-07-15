@@ -6,6 +6,8 @@
 ; 
 ; Extending C64 BASIC Part One - Parse String
 ; https://techwithdave.davevw.com/2022/05/extending-c64-basic-part-one-parse.html
+;
+; uses ACME Cross Compiler https://sourceforge.net/projects/acme-crossass/
 
 start=$C000 ; machine language org
 
