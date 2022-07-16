@@ -4,7 +4,7 @@
 ;
 ; MIT LICENSE
 ; 
-; Extending C64 BASIC Part Two - Parse String
+; Extending C64 BASIC Part Two - Parse Unsigned Integer (16-bit)
 ; https://techwithdave.davevw.com/2022/07/extending-c64-basic-part-two-parse-16.html
 ; https://github.com/davervw/extend-c64-BASIC/tree/master/part-two-delay-jiffies
 ;
