@@ -1,4 +1,4 @@
-; reverse.asm
+; delay.asm
 ; Copyright (c) 2022 by David R. Van Wagner
 ; davevw.com
 ;
